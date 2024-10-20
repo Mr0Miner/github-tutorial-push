@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آموزش آپلود پروژه در GitHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>آموزش آپلود پروژه در 
+            <img class="github-logo" src="https://img.icons8.com/?size=100&id=106562&format=png&color=FFFFFF" alt="GitHub Logo">
+        </h1>
+        <div class="step">
+            <h2>ایجاد یک مخزن جدید در GitHub</h2>
+            <p>ابتدا، باید یک مخزن جدید در GitHub ایجاد کنید. برای این کار، به سایت <a href="https://github.com">GitHub</a> بروید و روی دکمه “New repository” کلیک کنید. سپس، نام مخزن را وارد کنید و آن را به صورت عمومی یا خصوصی تنظیم کنید. در نهایت، روی دکمه “Create repository” کلیک کنید.</p>
+        </div>
+        <div class="step">
+            <h2>مقدماتی در کامپیوتر شما</h2>
+            <p>سپس، باید به دایرکتوری پروژه خود در کامپیوتر بروید. این کار را می‌توانید با استفاده از خط فرمان انجام دهید. برای مثال، اگر پروژه شما در دایرکتوری <code>C:\Users\YourName\YourProject</code> قرار دارد، می‌توانید دستور زیر را وارد کنید.</p>
+            <div class="code-container">
+                <code>cd C:\Users\YourName\YourProject</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'cd C:\\Users\\YourName\\YourProject')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>ایجاد یک مخزن محلی Git</h2>
+            <p>حالا که در دایرکتوری پروژه هستید، می‌توانید یک مخزن محلی Git ایجاد کنید. برای این کار، دستور زیر را وارد کنید. این دستور یک مخزن محلی Git در دایرکتوری فعلی شما ایجاد می‌کند.</p>
+            <div class="code-container">
+                <code>git init</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'git init')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>اضافه کردن فایل‌ها به مخزن Git</h2>
+            <p>بعد از ایجاد مخزن، باید فایل‌ها و پوشه‌های پروژه خود را به آن اضافه کنید. برای این کار، دستور زیر را وارد کنید. این دستور تمام فایل‌ها و پوشه‌ها را به مخزن Git اضافه می‌کند.</p>
+            <div class="code-container">
+                <code>git add .</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'git add .')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>ایجاد یک commit</h2>
+            <p>حالا که فایل‌ها را اضافه کردید، باید یک نقطه عطف یا “commit” ایجاد کنید. برای این کار، دستور زیر را وارد کنید. این دستور یک نقطه عطف جدید با پیام “commit initial” ایجاد می‌کند.</p>
+            <div class="code-container">
+                <code>git commit -m "commit initial"</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'git commit -m \"commit initial\"')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>اضافه کردن مخزن GitHub به عنوان یک “remote”</h2>
+            <p>بعد از ایجاد نقطه عطف، باید مخزن GitHub خود را به عنوان یک “remote” به مخزن محلی خود اضافه کنید. برای این کار، دستور زیر را وارد کنید. در این دستور، <code>Your-Repo-URL</code> باید با URL مخزن GitHub خود جایگزین شود.</p>
+            <div class="code-container">
+                <code>git remote add origin Your-Repo-URL</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'git remote add origin Your-Repo-URL')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="step">
+            <h2>ارسال تغییرات به مخزن GitHub</h2>
+            <p>در نهایت، تغییرات خود را به مخزن GitHub ارسال می‌کنید. برای این کار، دستور زیر را وارد کنید. این دستور، تغییرات شما را به شاخه “master” در مخزن GitHub ارسال می‌کند.</p>
+            <div class="code-container">
+                <code>git push -u origin master</code>
+                <button class="copy-btn" onclick="copyToClipboard(this, 'git push -u origin master')"><i class="fa fa-copy"></i></button>
+            </div>
+        </div>
+        <div class="video-show">
+            <h2>آموزش ویدیوی</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/c8mPhnG8s6E?si=F47ze028JkazmSDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
